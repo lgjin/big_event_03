@@ -33,7 +33,7 @@ $(function () {
         //阻止默认事件
         e.preventDefault()
         $.ajax({
-            url: 'http://api-breakingnews-web.itheima.net/api/reguser',
+            url: '/api/reguser',
             type: 'POST',
             data: {
                 username: $('.res-box input[name=username]').val(),
@@ -56,7 +56,7 @@ $(function () {
     $('#login-form').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-            url: 'http://api-breakingnews-web.itheima.net/api/login',
+            url: '/api/login',
             type: 'POST',
             data: $(this).serialize(),
             success: (res) => {
